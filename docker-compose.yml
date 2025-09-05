@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  node-app:
+    container_name: backend_node-app
+    build:
+      context: .
+    ports:
+      - "6970:6970"
+    volumes:
+      - /etc/letsencrypt/live/surath.online:/etc/letsencrypt/live/surath.online:ro
+    env_file:
+      - .env
+    restart: always
+    command: ["node", "index.js"]  # 👈 Replace with your actual start file
