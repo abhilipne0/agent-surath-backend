@@ -86,7 +86,7 @@ app.use("/", mainRouter);
 // ─────────────────────────────────────────────
 // Start Server
 // ─────────────────────────────────────────────
-const PORT = config.port || 6969;
+const PORT = config.port || 6970;
 const isProduction = process.env.NODE_ENV === "production";
 
 server.listen(PORT, () => {
